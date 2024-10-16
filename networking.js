@@ -54,6 +54,18 @@ q_a.insertMany([
 ]).then((res) =>{
     console.log(res);
 });
-// {question: "", option1: "", option2: "", option3: "", option4: "", c_option: ""},
-//     {question: "", option1: "", option2: "", option3: "", option4: "", c_option: ""},
-//     {question: "", option1: "", option2: "", option3: "", option4: "", c_option: ""},
+//     {
+//         question: "What is the capital of France?",
+//         options: ["London", "Berlin", "Paris", "Rome"],
+//         correct: 2
+//     },
+//     {
+//         question: "What is the largest planet in our solar system?",
+//         options: ["Jupiter", "Mars", "Earth", "Venus"],
+//         correct: 0
+//     },
+//     {
+//         question: "Which element has the chemical symbol 'O'?",
+//         options: ["Oxygen", "Gold", "Helium", "Silver"],
+//         correct: 0
+//     },

@@ -1,25 +1,6 @@
-const mongoose = require("mongoose");
 
-main().then(() => {
-    console.log("Connection successful");
-})
-.catch(err => console.log(err));
-
-async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/quantitative");
-}
-
-const userSchema = new mongoose.Schema({
-    question: String,
-    option1: String,
-    option2: String,
-    option3: String,
-    option4: String,
-    c_option: String
-});
-const q_a = mongoose.model("QandA", userSchema);
-
-q_a.insertMany([
+const question=
+[
     {question: "Percentages : A product is discounted by 20%. If the discounted price is $120, what was the original price? ", option1: "(a) $100 ", option2: "(b) $144 ", option3: "(c) $150 ", option4: "(d) $160", c_option: "(d) $160"},
     {question: "Ratios : If there are 3 red balls and 7 blue balls in a bag, what is the ratio of red balls to blue balls? ", option1: "(a) 3:10 ", option2: "(b) 1:7 ", option3: "(c) 3:7 ", option4: "(d) 7:3", c_option: "(c) 3:7 "},
     {question: "Averages : The average score of 5 students is 80. What is the total score of all 5 students? ", option1: "(a) 320 ", option2: "(b) 350 ", option3: "(c) 400 ", option4: "(d) 480", c_option: "(c) 400 "},
@@ -60,35 +41,4 @@ q_a.insertMany([
     {question: "LCM (Least Common Multiple): Find the least common multiple of 12 and 18. ", option1: "(a) 24 ", option2: "(b) 36 ", option3: "(c) 54 ", option4: "(d) 72 ", c_option: "(c) 54 "},
     {question: "HCF (Highest Common Factor): Find the highest common factor of 20 and 30. ", option1: "(a) 5 ", option2: "(b) 10 ", option3: "(c) 15 ", option4: "(d) 20", c_option: "(a) 5 "},
     {question: "Find out the wrong number in the series : 7, 8, 18, 57, 228, 1165, 6996. ", option1: "(a) 8 ", option2: "(b) 18 ", option3: "(c) 57 ", option4: "(d) 228", c_option: "(d) 228"},
-]).then((res) =>{
-    console.log(res);
-});
-// {question: "Test", option1: "a", option2: "b", option3: "c", option4: "d", c_option: "t"},
-//     {question: "Test", option1: "a", option2: "b", option3: "c", option4: "d", c_option: "t"},
-//     {question: "Test", option1: "a", option2: "b", option3: "c", option4: "d", c_option: "t"},
-// user.findById("668a70e6c5d72e372f0f9897").then((res) =>{
-//     console.log(res);
-// })
-// .catch((err) =>{
-//     console.log(err)
-// });
-
-// user.insertMany([
-//     {name: "Tony", email: "tony@gmail.com", age: 25},
-//     {name: "Peter", email: "peter@gmail.com", age: 47},
-//     {name: "Strange", email: "strange@gmail.com", age: 30},
-// ]).then((data) =>{
-//     console.log(data);
-// });
-
-// const user2 = new user({
-//     name: "Shayam",
-//     email: "shyam67@gmail.com",
-//     age: 35
-// });
-
-// user2.save().then((res) => {
-//     console.log(res);
-// }).catch((err) => {
-//     console.log(err);
-// });
+]
